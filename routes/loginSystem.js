@@ -11,8 +11,18 @@ const router = express.Router();
 /*----------------------
 ROUTES
 ----------------------*/
-router.get('/', (req, res) => {
-    res.render('index', { username: 'bobo' });
+//register routes
+router.get('/register', (req, res) => {
+    res.render('register');
+});
+
+router.post('/register', (req, res) => {
+    res.send('thx');
+});
+
+//login routes
+router.get('/login', (req, res) => {
+    res.render('login');
 });
 
 module.exports = router;

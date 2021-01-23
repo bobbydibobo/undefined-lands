@@ -40,7 +40,8 @@ app.use('/js', express.static(__dirname + 'public/js'));
 /*----------------------
 ROUTES
 ----------------------*/
-app.use('/hello', require('./routes/index'));
+app.use('/', require('./routes/index'));
+app.use('/user', require('./routes/loginSystem'));
 
 /*----------------------
 PORT
