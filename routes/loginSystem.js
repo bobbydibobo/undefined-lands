@@ -57,6 +57,7 @@ router.post('/register', checkNotAuth, (req, res) => {
     //error Array -> print messages
     let errors = [];
 
+    //Validation
     if(!username || !password) {
         errors.push({ message: 'Please fill in all fields!' });
     }
