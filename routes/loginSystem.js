@@ -11,9 +11,14 @@ ROUTER INIT
 const router = express.Router();
 
 /*----------------------
+USER
+----------------------*/
+const User = require('../models/User');
+
+/*----------------------
 TEMP USER
 ----------------------*/
-const users = [];
+//const users = [];
 
 /*----------------------
 PASSPORT
@@ -21,7 +26,7 @@ PASSPORT
 const initializePassport = require('../config/passport');
 initializePassport(
     passport,
-    username => users.find(user => user.username === username),
+    username => User.find(user => user.username === username),
     id => users.find(user => user.id === id)
 );
 
@@ -44,8 +49,62 @@ router.get('/register', checkNotAuth, (req, res) => {
     res.render('register');
 });
 
-router.post('/register', checkNotAuth, async (req, res) => {
-    try{
+router.post('/register', checkNotAuth, (req, res) => {
+
+    //temp user Object
+    const {username, password} = req.body;
+
+    //error Array -> print messages
+    let errors = [];
+
+    if(!username || !password) {
+        errors.push({ message: 'Please fill in all fields!' });
+    }
+
+    if(password.length < 6) {
+        errors.push({ message: 'Your password should at least have 6 characters!' });
+    }
+
+    if(errors.length > 0) {
+        res.render('register', {
+            errors
+        }); 
+    } else {
+        User.findOne({ username:username })
+        .then(user => {
+            if(user) {
+                errors.push({ message: 'Username is already taken!' });
+
+                res.render('register', {
+                    errors
+                });
+            } else {
+                const newUser = new User({
+                    username,
+                    password
+                });
+
+                //Hash the password
+                bcrypt.genSalt(10, (err, salt) => {
+                    bcrypt.hash(newUser.password, salt, (err, hash) =>{
+                        if(err) throw err;
+                        //Set pw to hashed
+                        newUser.password = hash;
+
+                        console.log(newUser);
+                        //Save user to db
+                        newUser.save()
+                        .then(() => {
+                            res.redirect('/user/login');
+                        })
+                        .catch(err => console.log(err));
+                    });
+                });
+            }
+        });
+    }
+
+   /* try{
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
         users.push({
             id: Date.now().toString(),
@@ -58,7 +117,7 @@ router.post('/register', checkNotAuth, async (req, res) => {
         res.redirect('/user/register');
     }
 
-    console.log(users);
+    console.log(users);*/
 });
 
 
