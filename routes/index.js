@@ -4,15 +4,26 @@ BIND DEPENDENCIES
 const express = require('express');
 
 /*----------------------
-ROUTER
+ROUTER INIT
 ----------------------*/
 const router = express.Router();
 
 /*----------------------
+CUSTOM FUNCTIONS
+----------------------*/
+const checkAuth = (req, res, next) => {
+    if(req.isAuthenticated()) {
+        return next();
+    }
+
+    res.redirect('/user/login');
+}
+
+/*----------------------
 ROUTES
 ----------------------*/
-router.get('/', (req, res) => {
-    res.render('index', { username: 'bobo' });
+router.get('/', checkAuth, (req, res) => {
+    res.render('index', { name: req.user.username });
 });
 
 module.exports = router;

@@ -1,1 +1,8 @@
-<h1>Welcome <%= username %></h1>
+<h1>Welcome <%= name %></h1>
+
+<form action="/user/logout?_method=DELETE" method="POST">
+    <button type="submit">logout</button>
+</form>
+
+<a href="/user/register">register</a>
+<a href="/user/login">login</a>

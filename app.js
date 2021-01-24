@@ -1,9 +1,20 @@
 /*----------------------
+LOAD ENV VARS
+----------------------*/
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config();
+}
+
+/*----------------------
 BIND DEPENDENCIES
 ----------------------*/
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
+const passport = require('passport');
+const flash = require('express-flash');
+const session = require('express-session');
+const methodOverride = require('method-override');
 
 /*----------------------
 INIT APP
@@ -23,6 +34,27 @@ EJS MIDDLEWARE
 ----------------------*/
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
+
+/*----------------------
+EXP SESSION & FLASH MIDDLEWARE
+----------------------*/
+app.use(flash());
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}));
+
+/*----------------------
+PASSPORT MIDDLEWARE
+----------------------*/
+app.use(passport.initialize());
+app.use(passport.session());
+
+/*----------------------
+METHOD OVERRIDE MIDDLEWARE
+----------------------*/
+app.use(methodOverride('_method'));
 
 /*----------------------
 BODYPARSER MIDDLEWARE
