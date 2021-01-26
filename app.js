@@ -75,6 +75,7 @@ ROUTES
 ----------------------*/
 app.use('/', require('./routes/index'));
 app.use('/user', require('./routes/loginSystem'));
+app.use('/game', require('./routes/game'));
 
 /*----------------------
 PORT

@@ -16,11 +16,6 @@ USER
 const User = require('../models/User');
 
 /*----------------------
-TEMP USER
-----------------------*/
-//const users = [];
-
-/*----------------------
 PASSPORT
 ----------------------*/
 const initializePassport = require('../config/passport');
@@ -35,7 +30,7 @@ CUSTOM FUNCTIONS
 ----------------------*/
 const checkNotAuth = (req, res, next) => {
     if(req.isAuthenticated()) {
-        return res.redirect('/');
+        return res.redirect('/game');
     }
 
     next();
@@ -128,7 +123,7 @@ router.get('/login', checkNotAuth, (req, res) => {
 });
 
 router.post('/login', checkNotAuth, passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: '/game',
     failureRedirect: '/user/login',
     failureFlash: true
 }));
@@ -136,7 +131,7 @@ router.post('/login', checkNotAuth, passport.authenticate('local', {
 //logout route
 router.delete('/logout', (req, res) => {
     req.logOut();
-    res.redirect('/user/login');
+    res.redirect('/');
 });
 
 module.exports = router;

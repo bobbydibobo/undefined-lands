@@ -1,8 +1,284 @@
+//FONTS
+$textFont: 'Roboto Condensed', sans-serif;
+$titleFont: 'Alegreya Sans SC', sans-serif;
+
+//COLOR-PALETTE
+$generalDark: #333333;
+$generalLight: #F5F5F5;
+
+$darkBrownie: #927B51;
+$lightBrownie: #A89166;
+
+$darkerGreen: #5f7244;
+$darkGreen: #80C31C;
+$lightGreen: #BCDD5A;
+
+$darkOrange: #FF6600;
+$lightOrange: #FBB36B;
+
+//MIXINS
+@mixin  flexCenter($d) {
+    display: flex;
+    flex-direction: $d;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin  flexAround($d) {
+    display: flex;
+    flex-direction: $d;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin  flexBetween($d) {
+    display: flex;
+    flex-direction: $d;
+    justify-content: space-between;
+    align-items: center;
+}
+
 //RESET
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(42, 42, 42);
-    color:  whitesmoke;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+//INDEX
+.landingPage{
+    background-color: $darkerGreen;
+    background-image: url('../img/indexBG.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+    .indexLogo{
+        @include flexCenter(row);
+        padding-top: 2%;
+
+        h2{
+            font-family: $titleFont;
+            color: $generalLight;
+            font-size: 5rem;
+            padding-top: 5%;
+
+            span{
+                color: $darkOrange;
+            }
+        }
+    }
+
+    .indexTitle{
+        padding-top: 1%;
+        @include flexCenter(row);
+
+        h3{
+            font-family: $titleFont;
+            color: $generalLight;
+            font-size: 2.5rem;
+
+            span{
+                color: $darkOrange
+            }
+        }
+    }
+
+    .regLog{
+        @include flexCenter(column);
+        padding-top: 5%;
+
+        a{
+            width: 10vw;
+            font-family: $titleFont;
+            font-size: 2rem;
+            text-align: center;
+            text-decoration: none;
+            background-color: $lightBrownie;
+            color: $generalLight;
+            border-radius: 1rem;
+            font-weight: bold;
+            margin-bottom: 3%;
+
+            &:hover{
+                background-color: $darkOrange;
+            }
+        }
+    }
+}
+
+//LOGIN-SYTSEM
+.registerPageGrey{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(92, 92, 92);
+    background-image: url('../img/indexBG.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+.registerPage{
+    width: 50vw;
+    height: 70vh;
+    position: fixed;
+    top: 15vh;
+    left: 25vw;
+    border-radius: 1rem;
+
+    .formCard{
+        @include flexBetween(row);
+        border-radius: 1rem;
+        border: 1px solid $darkOrange;
+        height: 60vh;
+
+        
+        .regTitle{
+            width: 33%;
+            height: 100%;
+            border-radius: 1rem 0 0 1rem;
+            background-color: green;
+            background-image: url('../img/formBG.jpg');
+            background-size: cover;
+            background-blend-mode: multiply;
+            @include flexCenter(column);
+
+
+            h3{
+                font-family: $titleFont;
+                color: $darkOrange;
+                font-size: 1.8rem;     
+                text-shadow: 0 0 2px $generalLight;
+                position: relative;
+                top: -20%;
+            }
+
+            p{
+                position: relative;
+                bottom: -5%;
+                font-family: $textFont;
+                text-align: center;
+                color: $generalLight;
+                padding: 0 5%;
+                text-shadow: 0 0 2px $generalLight;
+                font-size: 1.1rem;
+
+                span{
+                    font-size: 1.3rem;
+                    color: $darkOrange;
+                    text-shadow: 0 0 2px $darkOrange;
+                    position: relative;
+                    bottom: -40%; 
+                }
+            }
+        }
+
+        .regForm{
+            height: 100%;
+            width: 67%;
+            background-color: $darkOrange;
+            background-image: url('../img/secFormBG.jpg');
+            background-blend-mode:multiply;
+            border-radius: 0 1rem 1rem 0;
+            border-left: 1px solid $darkOrange;
+
+            .registryIcon {
+                @include flexCenter(column);
+                padding-top: 5%;
+            }
+
+            .regError{
+                @include flexCenter(column);
+                margin-left: 5%;
+                margin-top: 5%;
+                font-family: $textFont;
+                width: 90%;
+                background-color: red;
+                box-shadow: 0 0 5px whitesmoke;
+                font-size: 1.3rem;
+                color: $generalLight;
+                border-radius: 1rem;
+            }
+
+            .regLogRedirect{
+                @include flexCenter(column);
+                position: relative;
+                bottom: -5%;
+                left: 20%;;
+                background-color: $darkerGreen;
+                width: 60%;
+                border-radius: .5rem;
+
+                &:hover{
+                    box-shadow: 0 0 10px $darkerGreen;
+                }
+                a{
+                    color: $darkOrange;
+                    font-size: 1.1rem;
+                    text-decoration: none;
+                    font-family: $textFont;
+                }
+            }
+
+            form{
+                @include flexCenter(column);
+                width: 100%;
+                padding-top: 12%;
+
+                button{
+                    width: 30%;
+                    border-radius: .5rem;
+                    background-color: $darkerGreen;
+                    border: none;
+                    font-family: $textFont;
+                    font-size: 1.5rem;
+                    color: $darkOrange;
+
+                    &:hover{
+                        box-shadow: 0 0 10px $darkerGreen;
+                    }
+                }
+
+                .form-group{
+                    @include flexCenter(column);
+                    
+                    input{
+                        width: 180%;
+                        margin-bottom: 10%;
+                        border-radius: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//game
+.gamePage{
+    .map{
+        width: 100vw;
+        height: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        .tileGrass{
+            background-image: url('../img/grassTile.jpg');
+            border: 1px solid $lightBrownie;
+        }
+        .sandTile{
+            background-image: url('../img/sandTile.png');
+            border: 1px solid $lightBrownie;
+        }
+    }
 }

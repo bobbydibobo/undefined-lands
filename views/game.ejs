@@ -1,0 +1,29 @@
+<div class="gamePage">
+    <div class="upperInfo">
+        <ul>
+            <li><%= name %>, <%= title %></li>
+            <li>LvL<%= level %></li>
+            <li><%= coins %>EC</li>
+            <form action="/user/logout?_method=DELETE" method="POST">
+                <button type="submit">logout</button>
+            </form>
+        </ul>
+    </div>
+    <div class="map">
+        <% for(let i = 0; i < map.length; i++) { %>
+            <% if(map[i] === 0){ %>
+                <div class="tileGrass"> <%= map[i] %> </div>
+            <% } %>
+            <% if(map[i] === 1){ %>
+                <div class="sandTile"> <%= map[i] %> </div>
+            <% } %>
+        <% } %>
+    </div>
+    <div class="lowerInfo">
+        <ul>
+            <li>Army: <%= army %> | <%= capacity %></li>
+            <li>Attack: <%= stats[0] %> Defense: <%= stats[1] %> Healing: <%= stats[2] %></li>
+        </ul>
+    </div>
+</div>
+

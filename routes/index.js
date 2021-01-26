@@ -11,19 +11,19 @@ const router = express.Router();
 /*----------------------
 CUSTOM FUNCTIONS
 ----------------------*/
-const checkAuth = (req, res, next) => {
+const checkNotAuth = (req, res, next) => {
     if(req.isAuthenticated()) {
-        return next();
+        return res.redirect('/game');
     }
 
-    res.redirect('/user/login');
+    next();
 }
 
 /*----------------------
 ROUTES
 ----------------------*/
-router.get('/', checkAuth, (req, res) => {
-    res.render('index', { name: req.user.username });
+router.get('/',checkNotAuth, (req, res) => {
+    res.render('index');
 });
 
 module.exports = router;

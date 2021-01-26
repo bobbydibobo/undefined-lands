@@ -1,13 +1,39 @@
-<h1>Register</h1>
+<div class="registerPageGrey">
 
-<%- include ('./partials/_errMessages'); %>
 
-<form action="/user/register" method="POST">
+</div>
 
-    <%- include('./partials/_form_fields') %> 
+<div class="registerPage">
+    <div class="formCard">
+        <div class="regTitle">
+            <h3>Greetings Stranger!</h3>
+            <p>You must be the hero we have been waiting for all this time... <br> I knew you would come. <br> Follow me, I will bring you to Zul! <br><br>  <span>Create an Account and start your adventure!</span></p>
+        </div>
+        
+        <div class="regForm">
+            <div class="registryIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#5f7244" viewBox="0 0 24 24"><path d="M19.5 15c-2.483 0-4.5 2.015-4.5 4.5s2.017 4.5 4.5 4.5 4.5-2.015 4.5-4.5-2.017-4.5-4.5-4.5zm2.5 5h-2v2h-1v-2h-2v-1h2v-2h1v2h2v1zm-7.18 4h-14.815l-.005-1.241c0-2.52.199-3.975 3.178-4.663 3.365-.777 6.688-1.473 5.09-4.418-4.733-8.729-1.35-13.678 3.732-13.678 6.751 0 7.506 7.595 3.64 13.679-1.292 2.031-2.64 3.63-2.64 5.821 0 1.747.696 3.331 1.82 4.5z"/></svg>
+            </div>
+            
+                <form action="/user/register" method="POST">
+            
+                    <%- include('./partials/_form_fields') %> 
+                
+                    <button type="submit" class="saveBtn">Register</button>
+                
+                </form>
 
-    <button type="submit" class="saveBtn">Register</button>
+                <div class="regError">
+                    <%- include ('./partials/_errMessages'); %>
+                </div>
 
-</form>
+                <div class="regLogRedirect">
+                    <a href="/user/login">Already have an Account? &#8594; Login!</a>
+                </div>
+        </div>
 
-<a href="/user/login">Already have an Account? -> Login!</a>
+    </div>
+
+</div>
+    
+
