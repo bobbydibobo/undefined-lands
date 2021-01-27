@@ -1,21 +1,23 @@
 <div class="gamePage">
     <div class="upperInfo">
-        <ul>
-            <li><%= name %>, <%= title %></li>
-            <li>LvL<%= level %></li>
-            <li><%= coins %>EC</li>
+            <div class="name">
+                <p><%= name %>, <%= title %>>EC</p>
+            </div>
+            <div class="level">
+                <p>LvL<%= level %></p>
+            </div>
+            <div class="coins">
+                <p><%= coins %>EC</p>
+            </div>
             <form action="/user/logout?_method=DELETE" method="POST">
                 <button type="submit">logout</button>
             </form>
-        </ul>
+            <a href="/quests">Quests</a>
     </div>
     <div class="map">
         <% for(let i = 0; i < map.length; i++) { %>
             <% if(map[i] === 0){ %>
-                <div class="tileGrass"> <%= map[i] %> </div>
-            <% } %>
-            <% if(map[i] === 1){ %>
-                <div class="sandTile"> <%= map[i] %> </div>
+                <div class="tileGrass"></div>
             <% } %>
         <% } %>
     </div>

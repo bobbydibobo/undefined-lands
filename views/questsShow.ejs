@@ -1,0 +1,13 @@
+<div class="questPage">
+    <h1>Quests</h1>
+    <a href="/quests/new">New Quest</a>
+
+    <% quests.forEach(quest => { %> 
+        <div class="questContainer">
+            <p><%= quest.title %></p> 
+         </div>
+
+         <a href="quests/<%= quest.id %> ">show</a>
+    <% }); %> 
+    
+</div>

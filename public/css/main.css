@@ -256,16 +256,22 @@ html {
   width: 100vw;
   height: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .gamePage .map .tileGrass {
+  background-color: #BCDD5A;
   background-image: url("../img/grassTile.jpg");
   border: 1px solid #A89166;
+  cursor: pointer;
+}
+
+.gamePage .map .tileGrass:hover {
+  background-blend-mode: multiply;
 }
 
 .gamePage .map .sandTile {
   background-image: url("../img/sandTile.png");
-  border: 1px solid #A89166;
+  border: 0.1px solid #A89166;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,16 @@
+<div class="singleQuestPage">
+    <div class="questContainer">
+        <h1><%= quest.title %></h1>
+        <h2><%= quest.description %></h2>
+        <p><%= quest.task %></p>
+        <div class="rewards">
+            <p>+<%= quest.lvlIncrease %>LvL</p>
+            <p>+<%= quest.rewardCoins %>EC</p>
+        </div>
+    </div>
+
+    <div class="links">
+        <a href="/quests">back</a>
+        <a href="/quests/edit/<%= quest.id %> ">edit</a>
+    </div>
+</div>

@@ -271,14 +271,21 @@ html {
         width: 100vw;
         height: 100vw;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         .tileGrass{
+            background-color: $lightGreen;
             background-image: url('../img/grassTile.jpg');
             border: 1px solid $lightBrownie;
+            cursor: pointer;
+
+            &:hover{
+                
+                background-blend-mode: multiply;
+            }
         }
         .sandTile{
             background-image: url('../img/sandTile.png');
-            border: 1px solid $lightBrownie;
+            border: .1px solid $lightBrownie;
         }
     }
 }
