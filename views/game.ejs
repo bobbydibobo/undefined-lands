@@ -1,31 +1,71 @@
 <div class="gamePage">
     <div class="upperInfo">
-            <div class="name">
-                <p><%= name %>, <%= title %>>EC</p>
-            </div>
-            <div class="level">
-                <p>LvL<%= level %></p>
-            </div>
-            <div class="coins">
-                <p><%= coins %>EC</p>
-            </div>
+        <div class="logoutBtn">
             <form action="/user/logout?_method=DELETE" method="POST">
                 <button type="submit">logout</button>
             </form>
+        </div>
+           
+        <div class="questInbox">
             <a href="/quests">Quests</a>
+        </div>
+
+        <a href="/game/userupdate">update</a>
+
+        <div class="updateBtn">
+            <form action="/game/updateLvl?_method=PUT" method="POST">
+                <button type="submit">update</button>
+            </form>
+        </div>
+
     </div>
     <div class="map">
         <% for(let i = 0; i < map.length; i++) { %>
-            <% if(map[i] === 0){ %>
-                <div class="tileGrass"></div>
-            <% } %>
+                <div class="tile"><%= i %></div>
         <% } %>
     </div>
     <div class="lowerInfo">
-        <ul>
-            <li>Army: <%= army %> | <%= capacity %></li>
-            <li>Attack: <%= stats[0] %> Defense: <%= stats[1] %> Healing: <%= stats[2] %></li>
-        </ul>
+        <div class="name">
+            <p><%= name %></p>
+        </div>
+        <div class="title">
+            <% if(level < 10){ %>
+                <p>Major Dissapointment</p>
+            <% } %>
+            <% if(level > 10 && level < 20){ %>
+                <p>This.Nuts Commander</p>
+            <% } %>
+            <% if(level > 20 && level < 30){ %>
+                <p>General JSON</p>
+            <% } %>
+            <% if(level > 30 && level < 40){ %>
+                <p>Coersion Wizard</p>
+            <% } %>
+            <% if(level > 40 && level < 50){ %>
+                <p>Stack Overlord</p>
+            <% } %>
+            <% if(level > 50 && level < 60){ %>
+                <p>Virgin Emperor of the Undefined Lands</p>
+            <% } %>
+            <% if(level === 60){ %>
+                <p>Emperor of the Undefined Lands</p>
+            <% } %>
+        </div>
+        <div class="level">
+            <p>LvL<%= level %></p>
+        </div>
+        <div class="coins">
+            <p><%= coins %>EC</p>
+        </div>
+        <div class="army">
+            <p>Army: <%= army[0] %> | <%= army[1] %></p>
+        </div>
+        <div class="supplies">
+            <p>Supplies: <%= supplies[0] %> | <%= supplies[1] %></p>
+        </div>
+        <div class="stats">
+            Attack: <%= stats[0] %> Defense: <%= stats[1] %> Healing: <%= stats[2] %>
+        </div>
     </div>
 </div>
 

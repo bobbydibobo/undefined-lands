@@ -252,6 +252,22 @@ html {
   border-radius: .5rem;
 }
 
+.gamePage .upperInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #927B51;
+}
+
+.gamePage .lowerInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #927B51;
+}
+
 .gamePage .map {
   width: 100vw;
   height: 100vw;
@@ -259,19 +275,328 @@ html {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.gamePage .map .tileGrass {
-  background-color: #BCDD5A;
-  background-image: url("../img/grassTile.jpg");
-  border: 1px solid #A89166;
+.gamePage .map .tile {
+  background-image: url("../img/grassFull.jpg");
+  background-size: cover;
+  border: .2px solid green;
   cursor: pointer;
 }
 
-.gamePage .map .tileGrass:hover {
-  background-blend-mode: multiply;
+.gamePage .map .tile:hover {
+  filter: grayscale(100%);
 }
 
-.gamePage .map .sandTile {
-  background-image: url("../img/sandTile.png");
-  border: 0.1px solid #A89166;
+.gamePage .map .tile:nth-child(5) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(25) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(45) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(65) {
+  background-image: url("../img/waterCorner.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(66) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(67) {
+  background-image: url("../img/waterCorner.jpg");
+  transform: rotate(90deg);
+}
+
+.gamePage .map .tile:nth-child(87) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(107) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(127) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(147) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(167) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(187) {
+  background-image: url("../img/waterCorner.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(188) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(189) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(190) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(191) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(192) {
+  background-image: url("../img/waterCorner.jpg");
+  transform: rotate(90deg);
+}
+
+.gamePage .map .tile:nth-child(212) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(232) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(252) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(272) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(292) {
+  background-image: url("../img/waterSides.jpg");
+}
+
+.gamePage .map .tile:nth-child(312) {
+  background-image: url("../img/waterCorner.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(313) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(314) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(315) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(316) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(317) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(318) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(319) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(320) {
+  background-image: url("../img/waterSides.jpg");
+  transform: rotate(270deg);
+}
+
+.gamePage .map .tile:nth-child(285) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(304) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(305) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(306) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(323) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(324) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(325) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(326) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(327) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(344) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(345) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(346) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(365) {
+  background-image: url("../img/waterFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(264) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(265) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(266) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(286) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(287) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(307) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(308) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(328) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(348) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(347) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(366) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(367) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(385) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(386) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(384) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(364) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(363) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(343) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(342) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(322) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(302) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(283) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(303) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(284) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(321) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(301) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(349) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(329) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(309) {
+  background-image: url("../img/earthFull.jpg");
+}
+
+.gamePage .map .tile:nth-child(341) {
+  background-image: url("../img/earthFull.jpg");
 }
 /*# sourceMappingURL=main.css.map */

@@ -3,3 +3,7 @@
 <form action="/quests/<%= quest.id %> ?_method=PUT" method="POST">
     <%- include('./partials/_quest_form') %>
 </form>
+
+<form action="/quests/<%= quest.id %>?_method=DELETE" method="POST">
+    <button type="submit">delete</button>
+</form>

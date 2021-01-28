@@ -24,15 +24,41 @@ ROUTES
 ----------------------*/
 router.get('/', checkAuth, (req, res) => {
     res.render('game', {
+        id: req.user.id,
         name: req.user.username,
-        title: req.user.title,
         level: req.user.level,
         coins: req.user.coins,
         stats: req.user.stats,
         army: req.user.army,
-        capacity: req.user.capacity,
+        supplies: req.user.supplies,
         map: req.user.map
     });
+});
+
+router.get('/userupdate', (req, res) => {
+    res.render('updateUser', {
+        id: req.user.id,
+        name: req.user.username,
+        level: req.user.level,
+        coins: req.user.coins,
+        stats: req.user.stats,
+        army: req.user.army,
+        supplies: req.user.supplies,
+        map: req.user.map
+    });
+});
+
+router.put('/updateLvl', async (req, res) => {
+    let user = req.user;
+    user.level = req.user.level;
+
+    try{
+        user.level++;
+        await user.save();
+        res.redirect('/game');
+    } catch {
+        res.redirect('/game');
+    }
 });
 
 module.exports = router;

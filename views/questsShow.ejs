@@ -5,13 +5,10 @@
     <% quests.forEach(quest => { %> 
         <div class="questContainer">
             <p><%= quest.title %></p> 
+            <p><%= quest.description %></p>
         </div>
 
         <a href="quests/<%= quest.slug %> ">show</a>
-
-        <form action="/quests/<%= quest.id %>?_method=DELETE" method="POST">
-            <button type="submit">delete</button>
-        </form>
     <% }); %> 
     
 </div>

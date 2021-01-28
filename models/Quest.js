@@ -33,8 +33,8 @@ const questSchema = new mongoose.Schema({
     },
     slug: {
         type: String,
-        required: true,
-        unique: true
+        required: true
+        //unique: true
     },
     sanitizedHtml: {
         type: String,
