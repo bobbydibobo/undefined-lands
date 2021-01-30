@@ -270,19 +270,20 @@ html {
 
     .upperInfo{
         @include flexAround(row);
-        background-color: $darkBrownie;
+        background-color: $lightBrownie;
     }
 
     .lowerInfo{
         @include flexAround(row);
-        background-color: $darkBrownie; 
+        background-color: $lightBrownie; 
     }
 
     .map{
         width: 100vw;
         height: 100vw;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        background-color: blue;
 
         .tile{
             background-image: url('../img/grassFull.jpg');
@@ -293,248 +294,403 @@ html {
             &:hover{
                 filter: grayscale(100%);
             }
-            //water
-            &:nth-child(5){
-                background-image: url('../img/waterSides.jpg'); 
+            // lake
+            &:nth-child(158) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(25){
-                background-image: url('../img/waterSides.jpg'); 
+            &:nth-child(178) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(45){
-                background-image: url('../img/waterSides.jpg'); 
+            &:nth-child(179) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(65){
-                background-image: url('../img/waterCorner.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(180) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(66){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(198) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(67){
-                background-image: url('../img/waterCorner.jpg'); 
-                transform: rotate(90deg);
+            &:nth-child(199) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(87){
-                background-image: url('../img/waterSides.jpg'); 
+            &:nth-child(200) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(107){
-                background-image: url('../img/waterSides.jpg');
+            &:nth-child(201) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(127){
-                background-image: url('../img/waterSides.jpg');
+            &:nth-child(202) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(147){
-                background-image: url('../img/waterSides.jpg');
+            &:nth-child(220) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(167){
-                background-image: url('../img/waterSides.jpg');
+            &:nth-child(221) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(187){
-                background-image: url('../img/waterCorner.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(222) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(188){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(242) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(189){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+
+            //river
+            &:nth-child(295) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(190){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(296) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(191){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(297) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(192){
-                background-image: url('../img/waterCorner.jpg'); 
-                transform: rotate(90deg);
+            &:nth-child(298) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(212){
-                background-image: url('../img/waterSides.jpg');
+            &:nth-child(299) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(232){
-                background-image: url('../img/waterSides.jpg');
+            &:nth-child(320) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(252){
-                background-image: url('../img/waterSides.jpg');
+            &:nth-child(321) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(272){
-                background-image: url('../img/waterSides.jpg');
+            &:nth-child(322) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(292){
-                background-image: url('../img/waterSides.jpg');
+            &:nth-child(343) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(312){
-                background-image: url('../img/waterCorner.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(364) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(313){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(365) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(314){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(366) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(315){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(367) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(316){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(368) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(317){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(369) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(318){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(370) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(319){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(371) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(320){
-                background-image: url('../img/waterSides.jpg'); 
-                transform: rotate(270deg);
+            &:nth-child(372) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(285){
-                background-image: url('../img/waterFull.jpg'); 
+            &:nth-child(351) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(304){
-                background-image: url('../img/waterFull.jpg'); 
+            &:nth-child(330) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(305){
-                background-image: url('../img/waterFull.jpg'); 
+            &:nth-child(331) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(306){
-                background-image: url('../img/waterFull.jpg'); 
+            &:nth-child(332) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(323){
-                background-image: url('../img/waterFull.jpg'); 
+            &:nth-child(311) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(324){
-                background-image: url('../img/waterFull.jpg'); 
+            &:nth-child(312) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(325){
-                background-image: url('../img/waterFull.jpg'); 
+            &:nth-child(313) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(326){
-                background-image: url('../img/waterFull.jpg'); 
+            &:nth-child(314) {
+                background-image: url('../img/waterFull.jpg');
             }
-            &:nth-child(327){
-                background-image: url('../img/waterFull.jpg'); 
-            }
-            &:nth-child(344){
-                background-image: url('../img/waterFull.jpg'); 
-            }
-            &:nth-child(345){
-                background-image: url('../img/waterFull.jpg'); 
-            }
-            &:nth-child(346){
-                background-image: url('../img/waterFull.jpg'); 
-            }
-            &:nth-child(365){
-                background-image: url('../img/waterFull.jpg'); 
+            &:nth-child(315) {
+                background-image: url('../img/waterFull.jpg');
             }
 
             //earth
-            &:nth-child(264){
+            &:nth-child(196) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(265){
+            &:nth-child(197) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(266){
+            &:nth-child(177) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(286){
+            &:nth-child(176) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(287){
+            &:nth-child(175) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(307){
+            &:nth-child(217) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(308){
+            &:nth-child(218) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(328){
+            &:nth-child(219) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(348){
+
+            &:nth-child(181) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(347){
+            &:nth-child(182) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(366){
+            &:nth-child(183) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(367){
+            &:nth-child(203) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(385){
+            &:nth-child(204) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(386){
+            &:nth-child(225) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(384){
+            &:nth-child(224) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(364){
+            &:nth-child(223) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(363){
+            &:nth-child(196) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(343){
+            &:nth-child(197) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(342){
+            &:nth-child(177) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(322){
+            &:nth-child(176) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(302){
+            &:nth-child(175) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(283){
+            &:nth-child(217) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(303){
+            &:nth-child(218) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(284){
+            &:nth-child(136) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(321){
+            &:nth-child(137) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(301){
+            &:nth-child(138) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(349){
+            &:nth-child(157) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(329){
+            &:nth-child(159) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(309){
+            &:nth-child(156) {
                 background-image: url('../img/earthFull.jpg');
             }
-            &:nth-child(341){
+            &:nth-child(160) {
                 background-image: url('../img/earthFull.jpg');
+            }
+            &:nth-child(240) {
+                background-image: url('../img/earthFull.jpg');
+            }
+            &:nth-child(241) {
+                background-image: url('../img/earthFull.jpg');
+            }
+            &:nth-child(243) {
+                background-image: url('../img/earthFull.jpg');
+            }
+            &:nth-child(244) {
+                background-image: url('../img/earthFull.jpg');
+            }
+            &:nth-child(262) {
+                background-image: url('../img/earthFull.jpg');
+            }
+            &:nth-child(263) {
+                background-image: url('../img/earthFull.jpg');
+            }
+            &:nth-child(264) {
+                background-image: url('../img/earthFull.jpg');
+            }
+
+            //desert
+            &:nth-child(316) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(317) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(318) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(319) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(333) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(334) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(335) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(336) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(337) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(338) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(339) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(340) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(341) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(342) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(352) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(353) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(354) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(355) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(356) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(357) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(358) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(359) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(360) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(361) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(362) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(363) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(373) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(374) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(375) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(376) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(377) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(378) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(379) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(380) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(381) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(382) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(383) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(384) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(385) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(386) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(387) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(388) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(389) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(390) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(391) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(392) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(393) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(394) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(395) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(396) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(397) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(398) {
+                background-image: url('../img/sandFull.jpg');
+            }
+            &:nth-child(399) {
+                background-image: url('../img/sandFull.jpg');
             }
         }
     }

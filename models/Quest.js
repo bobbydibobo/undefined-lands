@@ -24,12 +24,13 @@ const questSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    rewardCoins:{
-        type: Number,
-        default: 100
+    solutions: {
+        type: String,
+        default: 'a'
     },
     requiredLvl: {
-        type: Number
+        type: Number,
+        default: 1
     },
     slug: {
         type: String,

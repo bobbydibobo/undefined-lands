@@ -7,18 +7,10 @@
         </div>
            
         <div class="questInbox">
-            <a href="/quests">Quests</a>
+            <a href="/game/quests">Quests</a>
         </div>
-
-        <a href="/game/userupdate">update</a>
-
-        <div class="updateBtn">
-            <form action="/game/updateLvl?_method=PUT" method="POST">
-                <button type="submit">update</button>
-            </form>
-        </div>
-
     </div>
+
     <div class="map">
         <% for(let i = 0; i < map.length; i++) { %>
                 <div class="tile"><%= i %></div>
