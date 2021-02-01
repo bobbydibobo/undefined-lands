@@ -110,6 +110,95 @@ router.delete('/quests/:id', async (req, res) => {
 });
 
 /*----------------------
+SHOP ROUTES
+----------------------*/
+router.get('/buildings', async (req, res) => {
+    const coins = await req.user.coins;
+    const army = await req.user.army;
+    const supplies = await req.user.supplies;
+    const map = await req.user.map;
+
+    res.render('buildShop', { 
+        coins: coins,
+        supplies: supplies,
+        army: army,
+        map: map
+    });
+});
+
+router.get('/error', (req, res) => {
+    res.render('errorSite');
+});
+
+router.put('/buildings', async (req, res) => {
+    const tileNr = await parseInt(req.body.tileNr);
+    const buildNr = await parseInt(req.body.buildNr);
+    let user = req.user;
+    user.map = req.user.map;
+    user.coins = req.user.coins;
+    user.supplies = req.user.supplies;
+    user.army = req.user.army;
+    user.desert = req.user.desert
+
+    if(user.map[tileNr] === 0 && buildNr === 1 && user.coins >= 500){
+        try{
+            user.coins -= 500;
+            
+            const newArmy = user.army.slice();
+            newArmy[0] += 10;
+            user.army = newArmy;
+
+            const newMap = user.map.slice();
+            newMap[tileNr] = buildNr;
+            user.map = newMap;
+
+            await user.save();
+            res.redirect('/game');
+        } catch(err) {
+            console.log(err);
+            res.redirect('/game/buildings');
+        }
+    } else if(user.map[tileNr] === -1 && buildNr === 2 && user.coins >= 1000) {
+        try{
+            user.coins -= 1000;
+            
+            const newSupplies = user.supplies.slice();
+            newSupplies[0] += 30;
+            user.supplies = newSupplies;
+
+            const newMap = user.map.slice();
+            newMap[tileNr] = buildNr;
+            user.map = newMap;
+
+            await user.save();
+            res.redirect('/game');
+        } catch(err) {
+            console.log(err);
+            res.redirect('/game/buildings');
+        }
+    } else if(user.map[tileNr] === -2 && buildNr === 3 && user.coins >= 5000){
+        try{
+            user.coins -= 5000;
+
+            const newArmy = user.army.slice();
+            newArmy[1] += 300;
+            user.army = newArmy;
+
+            const newMap = user.map.slice();
+            newMap[tileNr] = buildNr;
+            user.map = newMap;
+
+            await user.save();
+            res.redirect('/game');
+        } catch(err) {
+            console.log(err);
+            res.redirect('/game/buildings');
+        }
+    } else{
+        res.render('errorSite');
+    }
+});
+/*----------------------
 COSTUM FUNCTIONS
 ----------------------*/
 function saveQuestAndRedirect(path){

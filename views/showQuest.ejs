@@ -1,0 +1,22 @@
+<div class="showPostArea">
+
+    <h1><%= post.title %></h1>
+    <div class="atmDate">
+      <%= post.createdAt.toLocaleDateString() %>
+    </div>
+
+    <div class="goal">
+      <div class="goal">
+        <h2>Goal</h2>
+        <p><%- post.goal %></p>
+      </div>
+      <div class="process">
+        <h2>Process</h2>
+        <p><%- post.process %></p>
+      </div>
+      <div class="outcome">
+        <h2>Outcome</h2>
+        <p><%- post.outcome %></p>
+      </div>
+    </div>
+  </div>
