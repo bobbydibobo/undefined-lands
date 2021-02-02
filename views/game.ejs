@@ -18,11 +18,11 @@
     <div class="map">
         <% for(let i = 0; i < map.length; i++) { %>
             <% if(map[i] === 1){ %>
-                <div class="tile"><p>House</p></div>
+                <div class="houseTile"></div>
             <% } else if(map[i] === 2) { %>
-                <div class="tile"><p>Crop</p></div>
+                <div class="cropTile"></div>
             <% } else if(map[i] === 3) { %>
-                <div class="tile"><p>Bridge</p></div>
+                <div class="bridgeTile"></div>
             <% } else { %>
                 <div class="tile"><p><%= i  %></p></div>
             <% } %> 
@@ -36,19 +36,19 @@
             <% if(level < 10){ %>
                 <p>Major Dissapointment</p>
             <% } %>
-            <% if(level > 10 && level < 20){ %>
+            <% if(level >= 10 && level < 20){ %>
                 <p>This.Nuts Commander</p>
             <% } %>
-            <% if(level > 20 && level < 30){ %>
+            <% if(level >= 20 && level < 30){ %>
                 <p>General JSON</p>
             <% } %>
-            <% if(level > 30 && level < 40){ %>
+            <% if(level >= 30 && level < 40){ %>
                 <p>Coersion Wizard</p>
             <% } %>
-            <% if(level > 40 && level < 50){ %>
+            <% if(level >= 40 && level < 50){ %>
                 <p>Stack Overlord</p>
             <% } %>
-            <% if(level > 50 && level < 60){ %>
+            <% if(level >= 50 && level < 60){ %>
                 <p>Virgin Emperor of the Undefined Lands</p>
             <% } %>
             <% if(level === 60){ %>

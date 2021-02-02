@@ -16,242 +16,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.landingPage {
-  background-color: #5f7244;
-  background-image: url("../img/indexBG.jpg");
-  background-blend-mode: multiply;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-}
-
-.landingPage .indexLogo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-top: 2%;
-}
-
-.landingPage .indexLogo h2 {
-  font-family: "Alegreya Sans SC", sans-serif;
-  color: #F5F5F5;
-  font-size: 5rem;
-  padding-top: 5%;
-}
-
-.landingPage .indexLogo h2 span {
-  color: #FF6600;
-}
-
-.landingPage .indexTitle {
-  padding-top: 1%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.landingPage .indexTitle h3 {
-  font-family: "Alegreya Sans SC", sans-serif;
-  color: #F5F5F5;
-  font-size: 2.5rem;
-}
-
-.landingPage .indexTitle h3 span {
-  color: #FF6600;
-}
-
-.landingPage .regLog {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5%;
-}
-
-.landingPage .regLog a {
-  width: 10vw;
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  text-decoration: none;
-  background-color: #A89166;
-  color: #F5F5F5;
-  border-radius: 1rem;
-  font-weight: bold;
-  margin-bottom: 3%;
-}
-
-.landingPage .regLog a:hover {
-  background-color: #FF6600;
-}
-
-.registerPageGrey {
-  height: 100vh;
-  width: 100vw;
-  background-color: #5c5c5c;
-  background-image: url("../img/indexBG.jpg");
-  background-blend-mode: multiply;
-  background-size: cover;
-  filter: grayscale(100%);
-}
-
-.registerPage {
-  width: 50vw;
-  height: 70vh;
-  position: fixed;
-  top: 15vh;
-  left: 25vw;
-  border-radius: 1rem;
-}
-
-.registerPage .formCard {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 1rem;
-  border: 1px solid #FF6600;
-  height: 60vh;
-}
-
-.registerPage .formCard .regTitle {
-  width: 33%;
-  height: 100%;
-  border-radius: 1rem 0 0 1rem;
-  background-color: green;
-  background-image: url("../img/formBG.jpg");
-  background-size: cover;
-  background-blend-mode: multiply;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.registerPage .formCard .regTitle h3 {
-  font-family: "Alegreya Sans SC", sans-serif;
-  color: #FF6600;
-  font-size: 1.8rem;
-  text-shadow: 0 0 2px #F5F5F5;
-  position: relative;
-  top: -20%;
-}
-
-.registerPage .formCard .regTitle p {
-  position: relative;
-  bottom: -5%;
-  font-family: "Roboto Condensed", sans-serif;
-  text-align: center;
-  color: #F5F5F5;
-  padding: 0 5%;
-  text-shadow: 0 0 2px #F5F5F5;
-  font-size: 1.1rem;
-}
-
-.registerPage .formCard .regTitle p span {
-  font-size: 1.3rem;
-  color: #FF6600;
-  text-shadow: 0 0 2px #FF6600;
-  position: relative;
-  bottom: -40%;
-}
-
-.registerPage .formCard .regForm {
-  height: 100%;
-  width: 67%;
-  background-color: #FF6600;
-  background-image: url("../img/secFormBG.jpg");
-  background-blend-mode: multiply;
-  border-radius: 0 1rem 1rem 0;
-  border-left: 1px solid #FF6600;
-}
-
-.registerPage .formCard .regForm .registryIcon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5%;
-}
-
-.registerPage .formCard .regForm .regError {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5%;
-  margin-top: 5%;
-  font-family: "Roboto Condensed", sans-serif;
-  width: 90%;
-  background-color: red;
-  box-shadow: 0 0 5px whitesmoke;
-  font-size: 1.3rem;
-  color: #F5F5F5;
-  border-radius: 1rem;
-}
-
-.registerPage .formCard .regForm .regLogRedirect {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  bottom: -5%;
-  left: 20%;
-  background-color: #5f7244;
-  width: 60%;
-  border-radius: .5rem;
-}
-
-.registerPage .formCard .regForm .regLogRedirect:hover {
-  box-shadow: 0 0 10px #5f7244;
-}
-
-.registerPage .formCard .regForm .regLogRedirect a {
-  color: #FF6600;
-  font-size: 1.1rem;
-  text-decoration: none;
-  font-family: "Roboto Condensed", sans-serif;
-}
-
-.registerPage .formCard .regForm form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-top: 12%;
-}
-
-.registerPage .formCard .regForm form button {
-  width: 30%;
-  border-radius: .5rem;
-  background-color: #5f7244;
-  border: none;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.5rem;
-  color: #FF6600;
-}
-
-.registerPage .formCard .regForm form button:hover {
-  box-shadow: 0 0 10px #5f7244;
-}
-
-.registerPage .formCard .regForm form .form-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.registerPage .formCard .regForm form .form-group input {
-  width: 180%;
-  margin-bottom: 10%;
-  border-radius: .5rem;
-}
-
 .gamePage .upperInfo {
   display: flex;
   flex-direction: row;
@@ -274,6 +38,39 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: blue;
+}
+
+.gamePage .map .houseTile {
+  background-image: url("../img/houseTile.jpg");
+  background-size: cover;
+  border: .2px solid green;
+  cursor: pointer;
+}
+
+.gamePage .map .houseTile:hover {
+  filter: grayscale(100%);
+}
+
+.gamePage .map .cropTile {
+  background-image: url("../img/Crop.jpg");
+  background-size: cover;
+  border: .2px solid green;
+  cursor: pointer;
+}
+
+.gamePage .map .cropTile:hover {
+  filter: grayscale(100%);
+}
+
+.gamePage .map .bridgeTile {
+  background-image: url("../img/Bridge.jpg");
+  background-size: cover;
+  border: .2px solid green;
+  cursor: pointer;
+}
+
+.gamePage .map .bridgeTile:hover {
+  filter: grayscale(100%);
 }
 
 .gamePage .map .tile {
