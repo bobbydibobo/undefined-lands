@@ -3,7 +3,7 @@ $textFont: 'Roboto Condensed', sans-serif;
 $titleFont: 'Alegreya Sans SC', sans-serif;
 
 //COLOR-PALETTE
-$generalDark: #333333;
+$generalDark: #222222;
 $generalLight: #F5F5F5;
 
 $darkBrownie: #927B51;
@@ -11,10 +11,10 @@ $lightBrownie: #A89166;
 
 $darkerGreen: #5f7244;
 $darkGreen: #80C31C;
-$lightGreen: #BCDD5A;
+$lightGreen: #6ce906;
 
 $darkOrange: #FF6600;
-$lightOrange: #FBB36B;
+$lightOrange: #ffa600;
 
 //MIXINS
 @mixin  flexCenter($d) {
@@ -52,13 +52,230 @@ $lightOrange: #FBB36B;
     }
 }
 
+
 html {
     scroll-behavior: smooth; 
 }
 
+//INDEX
+.landingPage {
+    height: 100vh;
+    background-image: url('../img/indexBg.jpg');
+    background-size: cover;
 
+    .menu{
+        width: 28%;
+        height: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,0.9360878140318627) 0%, rgba(255,102,0,0) 100%);
 
-//game
+        .title{
+            @include flexCenter(column);
+            opacity: .9;
+            padding-top: 10%;
+
+            h3{
+                font-family: $titleFont;
+                font-size: 3rem;
+                color: $generalLight;
+
+                span{
+                    color: $lightGreen;
+                }
+            }
+
+            p{
+                width: 80%;
+                padding-top: 8%;
+                text-align: center;
+                font-family: $textFont;
+                font-size: 1.3rem;
+                color: $generalLight;
+
+                span{
+                    color: $lightGreen;
+                }
+            }
+        }
+
+        .regLog{
+            padding-top: 10%;
+            @include flexCenter(column);
+            text-align: center;
+            a{
+                width: 40%;
+                margin: 10% 0;
+                font-family: $titleFont;
+                font-size: 2.5rem;
+                text-decoration: none;
+                border-radius: 1rem;
+                background-color: $lightGreen;
+                color: $generalDark;
+                opacity: .7;
+
+                &:hover {
+                    opacity: 1;
+                    box-shadow: 0 0 5px $lightGreen;
+                }
+            }
+        }
+
+        .indexLogo {
+            position: fixed;
+            top: 85%;
+            left: 1%;
+            opacity: .6;
+            width: 25%;
+           @include flexCenter(row);
+    
+           .logoText {
+                
+                padding-top: 10%;
+                font-family: $titleFont;
+                font-size: 2rem;
+                color: $generalLight;
+    
+                span{
+                    color:  #6ce906;
+                }
+           }
+        }
+    }  
+}
+
+//LOGIN
+.loginPage {
+    background-image: url('../img/loginBg.jpg');
+    background-size: contain;
+    background-position-x: 1475%;
+    height: 100vh;
+    @include flexBetween(row);
+
+    .regTitle {
+        width: 40%;
+        height: 100%;
+        @include flexCenter(column);
+        background: rgba(0,0,0, .9);
+
+        h3{
+            font-family: $titleFont;
+            font-size: 3.5rem;
+            color:$generalLight;
+
+            span{
+                color: $lightGreen;
+            }
+        }
+
+        p{
+            padding-top: 10%;
+            font-family: $textFont;
+            text-align: center;
+            color: $generalLight;
+            font-size: 1.3rem;
+        }
+
+        .cta{
+            padding-top: 20%;
+            font-family: $textFont;
+            text-align: center;
+            color: $lightGreen;
+            font-size: 1.3rem;
+        }
+    }
+
+    .regForm {
+        height: 100%;
+        width: 60%;
+        background-color: rgba(0, 0, 0, .3);
+        @include flexCenter(column);
+
+        form{
+            @include flexCenter(column);
+
+            .form-group{
+                width: 150%;
+            }
+            .saveBtn{
+                font-family: $titleFont;
+                font-size: 1.6rem;
+                margin-top: 10%;
+                width: 150%;
+                padding: 1%;
+                border-radius: 1rem;
+                background-color: $lightGreen;
+                border: none;
+                opacity: .9;
+
+                &:hover{
+                    opacity: 1;
+                    box-shadow: 0 0 5px $lightGreen;
+                }
+            }
+        }
+
+        .regLogRedirect{
+            position: relative;
+            top: 10%;
+            padding: 1%;
+            background-color: rgba(0, 0, 0, .9);
+            @include flexCenter(row);
+            a{
+                font-family: $textFont;
+                font-size: 1.5rem;
+                text-align: center;
+                color: $lightGreen;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+//REGISTER
+.registerPage{
+    height: 100vh;
+    @include flexBetween(row);
+
+    .regTitle {
+        width: 40%;
+        height: 100%;
+        @include flexCenter(column);
+        background-color: $generalDark;
+
+        h3{
+            font-family: $titleFont;
+            font-size: 3.5rem;
+            color:$generalLight;
+
+            span{
+                color: $lightGreen;
+            }
+        }
+
+        p{
+            padding-top: 10%;
+            font-family: $textFont;
+            text-align: center;
+            color: $generalLight;
+            font-size: 1.3rem;
+        }
+
+        .cta{
+            padding-top: 20%;
+            font-family: $textFont;
+            text-align: center;
+            color: $lightGreen;
+            font-size: 1.3rem;
+        }
+    }
+
+    .regForm {
+        width: 60%;
+        @include flexCenter(column);
+    } 
+}
+
+//GAME
 .gamePage{
 
     .upperInfo{

@@ -1,19 +1,17 @@
-<div class="registerPageGrey">
-
-
-</div>
-
-<div class="registerPage">
-    <div class="formCard">
-
+<div class="loginPage">
         <div class="regTitle">
-            <h3>Welcome!</h3>
-            <p>You have come a long way.<br> But are you strong enough? <br> Hmmm... We will see. <br><br>  <span>Log in and let your journey begin!</span></p>
+            <h3><span>W</span>elcome!</h3>
+            <p>You have come a long way.<br> But are you strong enough? <br> Hmmm... We will see.</p>
+            <p class="cta"><span>Log in and let your journey begin!</span></p>
         </div>
 
         <div class="regForm">
             <div class="registryIcon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#5f7244" viewBox="0 0 24 24"><path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#6ce906" viewBox="0 0 24 24"><path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"/></svg>
+            </div>
+
+            <div class="regError">
+                <%- include('./partials/_messages') %> 
             </div>
             
             <form action="/user/login" method="POST">
@@ -23,15 +21,10 @@
                 <button type="submit" class="saveBtn">Login</button>
             
             </form>
-    
-            <div class="regError">
-                <%- include('./partials/_messages') %> 
-            </div>
             
             <div class="regLogRedirect">
                 <a href="/user/register">Don't have an account? -> Register!</a>
             </div>
         </div>
-    </div>
 </div>
 
