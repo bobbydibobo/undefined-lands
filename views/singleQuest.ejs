@@ -1,23 +1,35 @@
 <div class="singleQuestPage">
-    <div class="questContainer">
-        <h1><%= quest.title %></h1>
-        <div class="markDownTask">
-            <%- quest.sanitizedHtml %>
-        </div>
-    </div>
 
-    <% if(level === quest.requiredLvl){ %>
-        <div class="updateBtn">
-            <form action="/game/updateLvl?_method=PUT" method="POST">
-                <button type="submit">done</button>
-            </form>
-        </div>
-    <% } %>
-
-    <h4>Solutions:<%= quest.solutions %> </h4>
-
-    <div class="links">
+    <div class="questNavigation">
+        <h1>Quest</h1>
         <a href="/game/quests">back</a>
-        <a href="/game/quests/edit/<%= quest.id %> ">edit</a>
     </div>
+        
+    <div class="singleQuestContainer">
+        <div class="markDownTask">
+        <h1><%= quest.title %></h1>
+        <%- quest.sanitizedHtml %>
+        </div>
+
+        <div class="rightside">
+        <div class="questReward">
+            <h1>Reward:</h1>
+            <p><%= quest.requiredLvl * 100 %> &#8512;</p>
+        </div>
+        <div class="solutions">
+            <h1>Solution:</h1>
+            <p><%= quest.solutions %> </p>
+        </div>
+        <% if(level === quest.requiredLvl){ %>
+            <div class="updateBtn">
+                <form action="/game/updateLvl?_method=PUT" method="POST">
+                    <button type="submit">&#10003;</button>
+                </form>
+            </div>
+        <% } else { %>
+            <button id="fakeSubmit">&#10003;</button> 
+        <% } %>
+    </div>
+    </div>
+    
 </div>

@@ -1,17 +1,17 @@
 <div class="gamePage">
     <div class="upperInfo">
+        <div class="questInbox">
+            <a href="/game/quests"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#6ce906" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg></a>
+        </div>
+
+        <div class="buildingShop">
+            <a href="/game/buildings"><svg xmlns="http://www.w3.org/2000/svg" fill="#6ce906" width="40" height="40" viewBox="0 0 24 24"><path d="M8 9h-7.161l-.839-2h8v2zm0 2h-6.322l.839 2h5.483v-2zm8.53-4h-6.53v2h5.966l.564-2zm-1.694 6l.564-2h-5.4v2h4.836zm-6.336 5c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm11.305-15l-3.432 12h-13.017l.839 2h13.659l3.474-12h1.929l.743-2h-4.195zm-6.305 15c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z"/></svg></a>
+        </div>
+
         <div class="logoutBtn">
             <form action="/user/logout?_method=DELETE" method="POST">
                 <button type="submit">logout</button>
             </form>
-        </div>
-           
-        <div class="questInbox">
-            <a href="/game/quests">Quests</a>
-        </div>
-
-        <div class="buildingShop">
-            <a href="/game/buildings">Shop</a>
         </div>
     </div>
 
@@ -29,43 +29,50 @@
         <% } %>
     </div>
     <div class="lowerInfo">
-        <div class="name">
-            <p><%= name %></p>
+
+        <div class="nameTitleContainer">
+            <div class="title">
+                <% if(level < 10){ %>
+                    <p>Major Dissapointment</p>
+                <% } %>
+                <% if(level >= 10 && level < 20){ %>
+                    <p>This.Nuts Commander</p>
+                <% } %>
+                <% if(level >= 20 && level < 30){ %>
+                    <p>General JSON</p>
+                <% } %>
+                <% if(level >= 30 && level < 40){ %>
+                    <p>Coersion Wizard</p>
+                <% } %>
+                <% if(level >= 40 && level < 50){ %>
+                    <p>Stack Overlord</p>
+                <% } %>
+                <% if(level >= 50 && level < 60){ %>
+                    <p>Virgin Emperor of the Undefined Lands</p>
+                <% } %>
+                <% if(level === 60){ %>
+                    <p>Emperor of the Undefined Lands</p>
+                <% } %>
+            </div>
+            <div class="name">
+                <p><%= name %></p>
+            </div>
         </div>
-        <div class="title">
-            <% if(level < 10){ %>
-                <p>Major Dissapointment</p>
-            <% } %>
-            <% if(level >= 10 && level < 20){ %>
-                <p>This.Nuts Commander</p>
-            <% } %>
-            <% if(level >= 20 && level < 30){ %>
-                <p>General JSON</p>
-            <% } %>
-            <% if(level >= 30 && level < 40){ %>
-                <p>Coersion Wizard</p>
-            <% } %>
-            <% if(level >= 40 && level < 50){ %>
-                <p>Stack Overlord</p>
-            <% } %>
-            <% if(level >= 50 && level < 60){ %>
-                <p>Virgin Emperor of the Undefined Lands</p>
-            <% } %>
-            <% if(level === 60){ %>
-                <p>Emperor of the Undefined Lands</p>
-            <% } %>
+       
+        <div class="coins">
+            <p><%= coins %> <span>&#8512;</span></p>
         </div>
         <div class="level">
-            <p>LvL<%= level %></p>
+            <p><%= level %><span>LvL</span></p>
         </div>
-        <div class="coins">
-            <p><%= coins %>EC</p>
-        </div>
-        <div class="army">
-            <p>Army: <%= army[0] %> | <%= army[1] %></p>
-        </div>
-        <div class="supplies">
-            <p>Supplies: <%= supplies[0] %> | <%= supplies[1] %></p>
+
+        <div class="armySupContainer">
+            <div class="army">
+                <p><span>Army</span>: <%= army[0] %> <span>|</span> <%= army[1] %></p>
+            </div>
+            <div class="supplies">
+                <p><span>Supplies</span>: <%= supplies[0] %> <span>|</span> <%= supplies[1] %></p>
+            </div>
         </div>
     </div>
 </div>

@@ -1,17 +1,33 @@
 <div class="questPage">
-    <h1>Quests</h1>
-    <a href="/game/quests/new">New Quest</a>
 
-    <% quests.forEach(quest => { %> 
-        <% if(quest.requiredLvl <= level){ %>
-            <div class="questContainer">
-                <p><%= quest.title %></p> 
-                <p><%= quest.description %></p>
-            </div>
-        <% } %>
-        <a href="/game/quests/<%= quest.slug %> ">show</a>
-    <% }); %> 
-
-    <a href="/game">back</a>
+    <div class="questNav">
+        <h1>Quests</h1>
+        <!--<a href="/game/quests/new">New Quest</a>-->
     
+        <a href="/game">back</a>
+    </div>
+    <div class="allQuestsContainer">
+        <% quests.forEach(quest => { %> 
+            <% if(quest.requiredLvl === level){ %>
+                <div class="actualQuestContainer">
+                    <div class="content">
+                        <h2><%= quest.title %></h2> 
+                        <p><%= quest.description %></p>
+                    </div>
+                    
+                    <a href="/game/quests/<%= quest.slug %> ">?</a>
+                </div>
+            <% } %>
+            <% if(quest.requiredLvl < level){ %>
+                <div class="questContainer">
+                    <div class="content">
+                        <h2><%= quest.title %></h2> 
+                        <p><%= quest.description %></p>
+                    </div>
+                    
+                    <a href="/game/quests/<%= quest.slug %> ">&#10003;</a>
+                </div>
+            <% } %>
+        <% }); %> 
+    </div> 
 </div>

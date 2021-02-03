@@ -26,11 +26,11 @@ const questSchema = new mongoose.Schema({
     },
     solutions: {
         type: String,
-        default: 'a'
+        required: true
     },
     requiredLvl: {
         type: Number,
-        default: 1
+        required: true
     },
     slug: {
         type: String,

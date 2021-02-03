@@ -46,7 +46,7 @@ router.put('/updateLvl', async (req, res) => {
     user.coins = req.user.coins;
 
     try{
-        user.coins += rewardCoinsDependingOnLvl(req.user.level);
+        user.coins += (user.level * 100);
         user.level++;
         await user.save();
         res.redirect('/game');
@@ -207,6 +207,8 @@ function saveQuestAndRedirect(path){
         quest.title = req.body.title;
         quest.description = req.body.description;
         quest.markdown = req.body.markdown;
+        quest.solutions = req.body.solutions;
+        quest.requiredLvl = parseInt(req.body.requiredLvl);
     
         try{
             quest = await quest.save();
@@ -216,26 +218,6 @@ function saveQuestAndRedirect(path){
             res.render(`${path}`, {quest: quest}); 
         }
     }  
-}
-
-function rewardCoinsDependingOnLvl(userLvl) {
-    let coins;
-
-    if(userLvl < 10){
-        coins = 100;
-    } else if(userLvl >= 10 && userLvl < 20) {
-        coins = 200;
-    } else if(userLvl >= 20 && userLvl < 30) {
-        coins = 300;
-    } else if(userLvl >= 30 && userLvl < 40) {
-        coins = 400;
-    } else if(userLvl >= 40 && userLvl < 50) {
-        coins = 500;
-    } else if(userLvl >= 50) {
-        coins = 600;
-    }
-
-    return coins;
 }
 
 module.exports = router;

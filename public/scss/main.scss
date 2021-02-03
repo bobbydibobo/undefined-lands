@@ -52,6 +52,15 @@ $lightOrange: #ffa600;
     }
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: $generalDark;
+    background:$lightGreen;
+  }
+  
+  ::selection {
+    color: $generalDark;
+    background:$lightGreen;
+  }
 
 html {
     scroll-behavior: smooth; 
@@ -152,10 +161,14 @@ html {
     @include flexBetween(row);
 
     .regTitle {
+        background-image: url('../img/questPattern.jpg');
+        background-color: $generalDark;
+        background-size: cover;
+        background-blend-mode:multiply ;
+        box-shadow: 0 0 20px $lightGreen;
         width: 40%;
         height: 100%;
         @include flexCenter(column);
-        background: rgba(0,0,0, .9);
 
         h3{
             font-family: $titleFont;
@@ -233,6 +246,9 @@ html {
 
 //REGISTER
 .registerPage{
+    background-image: url('../img/registerBg.jpg');
+    background-size: cover;
+    background-position-y: 20%;
     height: 100vh;
     @include flexBetween(row);
 
@@ -240,7 +256,11 @@ html {
         width: 40%;
         height: 100%;
         @include flexCenter(column);
+        background-image: url('../img/questPattern.jpg');
         background-color: $generalDark;
+        background-size: cover;
+        background-blend-mode:multiply ;
+        box-shadow: 0 0 20px $lightGreen;
 
         h3{
             font-family: $titleFont;
@@ -270,25 +290,177 @@ html {
     }
 
     .regForm {
+        height: 100%;
         width: 60%;
+        background-color: rgba(0, 0, 0, .3);
         @include flexCenter(column);
-    } 
+
+        form{
+            @include flexCenter(column);
+
+            .form-group{
+                width: 150%;
+            }
+            .saveBtn{
+                font-family: $titleFont;
+                font-size: 1.6rem;
+                margin-top: 10%;
+                width: 150%;
+                padding: 1%;
+                border-radius: 1rem;
+                background-color: $lightGreen;
+                border: none;
+                opacity: .9;
+
+                &:hover{
+                    opacity: 1;
+                    box-shadow: 0 0 5px $lightGreen;
+                }
+            }
+        }
+
+        .regLogRedirect{
+            position: relative;
+            top: 10%;
+            padding: 1%;
+            background-color: rgba(0, 0, 0, .9);
+            @include flexCenter(row);
+            a{
+                font-family: $textFont;
+                font-size: 1.5rem;
+                text-align: center;
+                color: $lightGreen;
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 //GAME
 .gamePage{
 
     .upperInfo{
-        @include flexAround(row);
-        background-color: $lightBrownie;
+        @include flexBetween(row);
+        background-image: url('../img/questPattern.jpg');
+        background-color: $generalDark;
+        background-size: cover;
+        background-blend-mode:multiply ;
+        height: 7vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid $lightGreen;
+        z-index: 10;
+        padding-left: 5%;
+
+        .buildingShop, .questInbox{
+            opacity: .7;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .logoutBtn{
+            background-color: $lightGreen;
+            height: 100%;
+            width: 10%;
+            opacity: .7;
+
+            &:hover {
+                opacity: 1;
+                box-shadow: 0 0 5px $lightGreen;
+            }
+
+            form{
+                padding-top: 5%;
+                @include flexCenter(row);
+                button{
+                    border: none;
+                    background: none;
+                    border-radius: 1rem;
+                    font-family: $titleFont;
+                    font-size: 1.6rem;
+                    opacity: .8;
+                }
+            }
+        }
     }
 
     .lowerInfo{
-        @include flexAround(row);
-        background-color: $lightBrownie; 
+        @include flexBetween(row);
+        background-image: url('../img/questPattern.jpg');
+        background-color: rgb(15, 15, 15);
+        background-size: cover;
+        background-blend-mode:multiply ;
+        height: 15vh;
+        width: 100%;
+        position: fixed;
+        bottom: 0; 
+        border-top: 1px solid $lightGreen;
+        color: white;
+        font-family: $titleFont;
+        z-index: 10;
+
+        .armySupContainer{
+            padding-top: 2%;
+            @include flexCenter(column);
+            width: 25%;
+            height: 100%;
+            border-left: 1px solid $lightGreen;
+            opacity: .9;
+            
+            .army, .supplies{
+                p{
+                    font-size: 1.5rem;
+                    color: $generalLight;
+    
+                    span{
+                        color: $lightGreen; 
+                    }
+                }
+            }
+        }
+
+        .nameTitleContainer{
+            width: 25%;
+            border-right: 1px solid $lightGreen;
+            opacity: .9;
+            padding-top: 2%;
+            text-align: center;
+
+            .name{
+                p{
+                    font-size: 3rem;
+                    color: $lightGreen;
+                }
+            }
+
+            .title{
+                p{
+                    font-size: 1.5rem;
+                    color: $generalLight;
+                } 
+            }
+        }
+
+        .coins, .level{
+            padding-top: 2%;
+            p{
+                font-size: 2rem;
+                color: $generalLight;
+
+                span{
+                    color: $lightGreen; 
+                }
+            }  
+        }
     }
 
+    //MAP
     .map{
+        padding-top: 7vh;
+        padding-bottom: 15vh;
         width: 100vw;
         height: 100vw;
         display: grid;
@@ -735,6 +907,384 @@ html {
             }
             &:nth-child(399) {
                 background-image: url('../img/sandFull.jpg');
+            }
+        }
+    }
+}
+
+//QUESTS
+.questPage{
+    min-height: 100vh;
+    background-image: url('../img/questPattern.jpg');
+    background-color: rgb(68, 68, 68);
+    background-size: cover;
+    background-blend-mode:multiply ;
+    overflow: hidden;
+    .questNav{
+        background-image: url('../img/questPattern.jpg');
+        background-color: $lightGreen;
+        background-size: cover;
+        background-blend-mode:multiply ;
+        @include flexBetween(row);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 8vh;
+        border-bottom: 1px solid $lightGreen;
+        z-index: 10;
+
+        h1{
+            @include flexCenter(row);
+            font-family: $titleFont;
+            font-size: 3rem;
+            color: $generalDark;
+            background-color: #6ce906;
+            height: 9vh;
+            width: 15%;
+        }
+        
+        a{
+            @include flexCenter(row);
+            font-family: $titleFont;
+            font-size: 2rem;
+            text-decoration: none;
+            color: $generalDark;
+            background-color: $lightGreen;
+            height: 8vh;
+            width: 10%;
+            opacity: .9;
+            border-bottom: 1px solid $lightGreen;
+
+            &:hover {
+                opacity: 1;
+                box-shadow: 0 0 5px $lightGreen;
+            }
+        }
+    }
+
+   .allQuestsContainer{
+       padding-top: 8vh;
+
+       .actualQuestContainer{
+            background-image: url('../img/questPattern.jpg');
+            background-color: $generalDark;
+            background-blend-mode:multiply ;
+            margin-top: .3vh;
+            @include flexBetween(row);
+            height: 15vh;
+            
+            &:hover {
+                box-shadow:  0 0 10px $lightGreen;
+            }
+
+           .content{
+               padding-left: 2%;
+               padding-top: 2%;
+            h2{
+                color: $lightGreen;
+                font-family: $titleFont;
+                font-size: 2rem;
+            }
+            
+            p{
+                 color: $generalLight;
+                 font-family: $titleFont;
+                 font-size: 1.2rem;   
+            }
+           }
+           
+            a{
+                background-color: $lightGreen;
+                width: 10%;
+                height: 100%;
+                @include flexCenter(row);
+                opacity: .9;
+                color: $generalDark;
+                font-family: $titleFont;
+                text-decoration: none;
+                font-size: 8rem;
+
+                &:hover{
+                    opacity: 1;
+                    box-shadow: 0 0 5px $lightGreen;
+                }
+          }
+
+       }
+
+       .questContainer{
+           @include flexBetween(row);
+           background-image: url('../img/questPattern.jpg');
+            background-color: rgb(22, 22, 22);
+            background-blend-mode:multiply ;
+            margin-top: .3vh;
+            height: 15vh;
+
+            &:hover {
+                box-shadow:  0 0 10px $lightGreen;
+            }
+
+            .content{
+                padding-left: 2%;
+                padding-top: 2%;
+             h2{
+                 color: grey;
+                 font-family: $titleFont;
+                 font-size: 2rem;
+             }
+             
+             p{
+                  color: $generalLight;
+                  font-family: $titleFont;
+                  font-size: 1.2rem;   
+             }
+            }
+            
+             a{
+                 background-color: $lightGreen;
+                 width: 10%;
+                 height: 100%;
+                 @include flexCenter(row);
+                 opacity: .7;
+                 color: $generalDark;
+                 font-family: $titleFont;
+                 text-decoration: none;
+                 font-size: 6rem;
+ 
+                 &:hover{
+                     opacity: 1;
+                     box-shadow: 0 0 5px $lightGreen;
+                 }
+       }
+   }
+    
+   }
+}
+
+//SINGLE QUEST
+
+.singleQuestPage{
+    min-height: 100vh;
+    background-color: $generalDark;
+    overflow: hidden;
+    .questNavigation{
+        background-image: url('../img/questPattern.jpg');
+        background-color: $lightGreen;
+        background-size: cover;
+        background-blend-mode:multiply ;
+        @include flexBetween(row);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 8vh;
+        border-bottom: 1px solid $lightGreen;
+        z-index: 10;
+
+        h1{
+            @include flexCenter(row);
+            color: $generalDark;
+            font-family: $titleFont;
+            font-size: 2rem;
+            background-color: #6ce906;
+            height: 9vh;
+            width: 15%;
+        }
+
+        a{
+            
+            @include flexCenter(row);
+            font-family: $titleFont;
+            font-size: 2rem;
+            text-decoration: none;
+            color: $generalDark;
+            background-color: $lightGreen;
+            height: 8vh;
+            width: 10%;
+            opacity: .9;
+            border-bottom: 1px solid $lightGreen;
+
+            &:hover{
+                opacity: 1;
+                box-shadow: 0 0 5px $lightGreen;
+            }
+        }
+    }
+
+    .singleQuestContainer{
+        @include flexBetween(row);
+        .markDownTask{
+            padding: 7% 2%;
+            color: grey;
+            font-family: $titleFont;
+            font-size: 150%;
+            width: 90%;
+        }
+
+        h1{
+            color: $lightGreen;
+        }
+
+        .rightside{
+            @include flexBetween(row);
+            position: fixed;
+            bottom: 0;
+            height: 10vh;
+            width: 100%;
+            border-top: 1px solid $lightGreen;
+            background-color: $generalDark;
+
+            .questReward{
+                @include flexAround(row);
+                width: 15%;
+
+                h1{
+                    color: $lightGreen;
+                    font-family: $titleFont;
+                    font-size: 2rem;  
+                  }
+                
+                p{
+                    color: $lightGreen;
+                    font-family: $titleFont;
+                    font-size: 2rem;   
+                }
+            }
+
+            .solutions{
+                @include flexAround(row);
+                width: 15%;
+                h1{
+                    color: $lightGreen;
+                    font-family: $titleFont;
+                    font-size: 2rem;  
+                }
+                p{
+                    font-family: $titleFont;
+                    font-size: 2.5rem;
+                }  
+            }
+
+            #fakeSubmit{
+                width: 20%;
+                height: 10vh;
+                border: none;
+                background-color: $lightGreen;
+                font-size: 3rem;
+                opacity: .1;
+            }
+
+            .updateBtn{
+                width: 20%;
+
+                form{
+                    width: 100%;
+                    height: 10vh;
+                    button{
+                        width: 100%;
+                        height: 10vh;
+                        border: none;
+                        background-color: $lightGreen;
+                        font-size: 3rem;
+                        opacity: .8;
+
+                        &:hover {
+                            opacity: 1;
+                            box-shadow: 0 0 1px $lightGreen;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
+
+//SHOP 
+.shopPage{
+    min-height: 100vh;
+    background-color: $generalDark;
+    overflow: hidden;
+    .shopNav{
+        background-image: url('../img/questPattern.jpg');
+        background-color: $lightGreen;
+        background-size: cover;
+        background-blend-mode:multiply ;
+        @include flexBetween(row);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 8vh;
+        border-bottom: 1px solid $lightGreen;
+        z-index: 10;
+
+        h1{
+            @include flexCenter(row);
+            color: $generalDark;
+            font-family: $titleFont;
+            font-size: 3rem;
+            background-color: #6ce906;
+            height: 9vh;
+            width: 15%;
+        }
+
+        a{
+            
+            @include flexCenter(row);
+            font-family: $titleFont;
+            font-size: 2rem;
+            text-decoration: none;
+            color: $generalDark;
+            background-color: $lightGreen;
+            height: 8vh;
+            width: 10%;
+            opacity: .9;
+            border-bottom: 1px solid $lightGreen;
+
+            &:hover{
+                opacity: 1;
+                box-shadow: 0 0 5px $lightGreen;
+            }
+        }
+    }
+
+    .items{
+        padding-top: 7%;
+        @include flexAround(row);
+        color: $generalLight;
+        font-family: $titleFont;
+
+        .item{
+            @include flexAround(column);
+
+            h3{
+                color: $lightGreen;
+                font-size: 2.3rem;
+            }
+
+            p{
+                font-size: 1.5rem;   
+            }
+        }
+    }
+
+    form{
+        padding-top: 5%;
+        @include flexCenter(column);
+
+        .form-group{
+            width: 30vw;
+        }
+        button{
+            margin-top: 3vh;
+            width: 30vw;
+            font-family: $titleFont;
+            font-size: 1.5rem;
+            border: none;
+            background-color: $lightGreen;
+            opacity: .8;
+
+            &:hover{
+                opacity: 1;
+                box-shadow: 0 0 5px $lightGreen;
             }
         }
     }

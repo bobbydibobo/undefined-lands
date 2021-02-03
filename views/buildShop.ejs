@@ -1,5 +1,33 @@
-<h1>SHOP</h1>
+<div class="shopPage">
+    <div class="shopNav">
+        <h1>Shop</h1>
+        <!--<a href="/game/quests/new">New Quest</a>-->
+    
+        <a href="/game">back</a>
+    </div>
+    <div class="items">
+        <div class="item">
+            <h3>House</h3>
+            <p>+10 Capacity</p>
+            <p>500 &#8512;</p>
+            <p>#1</p>
+        </div>
+        <div class="item">
+            <h3>Supplies</h3>
+            <p>+20 Supplies</p>
+            <p>3000 &#8512;</p>
+            <p>#2</p>
+        </div>
+        <div class="item">
+            <h3>Bridge</h3>
+            <p>+300 Capacity-Cap</p>
+            <p>20000 &#8512;</p>
+            <p>#3</p>
+        </div>
+    </div>
 
-<form action="/game/buildings?_method=PUT" method="POST">
-    <%- include('./partials/_shop_form') %>
-</form>
+    <form action="/game/buildings?_method=PUT" method="POST">
+        <%- include('./partials/_shop_form') %>
+    </form>
+</div>
+
