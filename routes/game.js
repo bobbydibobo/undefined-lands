@@ -48,6 +48,10 @@ router.get('/', checkAuth, (req, res) => {
     });
 });
 
+router.get('/lol', (req, res) => {
+    res.render('lol');
+});
+
 router.put('/updateLvl', async (req, res) => {
     let user = req.user;
     user.level = req.user.level;
@@ -57,7 +61,12 @@ router.put('/updateLvl', async (req, res) => {
         user.coins += (user.level * 100);
         user.level++;
         await user.save();
-        res.redirect('/game');
+
+        if(user.level === 60){
+            res.redirect('/game/lol')
+        } else {
+            res.redirect('/game');
+        } 
     } catch(e) {
         console.log(e);
         res.redirect('/game');

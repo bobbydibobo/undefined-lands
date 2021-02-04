@@ -1,9 +1,12 @@
-<h1>Edit Quest</h1>
+<div class="editPage">
+    <h1>Edit Quest</h1>
 
-<form action="/game/quests/<%= quest.id %> ?_method=PUT" method="POST">
-    <%- include('./partials/_quest_form') %>
-</form>
+    <form action="/game/quests/<%= quest.id %> ?_method=PUT" method="POST">
+        <%- include('./partials/_quest_form') %>
+    </form>
+    
+    <form action="/game/quests/<%= quest.id %>?_method=DELETE" method="POST">
+        <button type="submit">delete</button>
+    </form>
+</div>
 
-<form action="/game/quests/<%= quest.id %>?_method=DELETE" method="POST">
-    <button type="submit">delete</button>
-</form>

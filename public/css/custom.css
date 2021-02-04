@@ -1,0 +1,309 @@
+* {
+  color: #c2c2c2;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+main .horizontal .resume {
+  background-image: url("/img/loginBg.jpg");
+  background-size: cover;
+}
+
+main .horizontal .resume .overlay {
+  width: 80%;
+  height: 100%;
+  background: black;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.936088) 0%, rgba(255, 102, 0, 0) 100%);
+}
+
+main .horizontal .resume .overlay .textArea {
+  padding-left: 1%;
+  width: 45%;
+}
+
+main .horizontal .resume .overlay .textArea h1 {
+  position: relative;
+  left: -5%;
+  text-align: center;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #6ce906;
+  padding-bottom: 10%;
+}
+
+main .horizontal .resume .overlay .textArea p {
+  padding-bottom: 5%;
+  text-align: center;
+  width: 90%;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2rem;
+  color: #c2c2c2;
+}
+
+main .horizontal .resume .overlay .textArea p span {
+  color: #6ce906;
+}
+
+main .horizontal .technologies {
+  background-image: url("/img/registerBg.jpg");
+  background-size: cover;
+}
+
+main .horizontal .technologies .overlay {
+  width: 80%;
+  height: 100%;
+  background: black;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.936088) 0%, rgba(255, 102, 0, 0) 100%);
+}
+
+main .horizontal .technologies .overlay .textArea {
+  padding-left: 1%;
+  width: 45%;
+}
+
+main .horizontal .technologies .overlay .textArea h1 {
+  position: relative;
+  left: -5%;
+  text-align: center;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #6ce906;
+  padding-bottom: 10%;
+}
+
+main .horizontal .technologies .overlay .textArea p {
+  padding-bottom: 5%;
+  text-align: center;
+  width: 90%;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2rem;
+  color: #c2c2c2;
+}
+
+main .horizontal .technologies .overlay .textArea p span {
+  color: #6ce906;
+}
+
+main .horizontal .intro {
+  background-image: url("/img/indexBg.jpg");
+  background-size: cover;
+}
+
+main .horizontal .intro .overlay {
+  width: 80%;
+  height: 100%;
+  background: black;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.936088) 0%, rgba(255, 102, 0, 0) 100%);
+}
+
+main .horizontal .intro .overlay .textArea {
+  padding-left: 1%;
+  width: 45%;
+}
+
+main .horizontal .intro .overlay .textArea h1 {
+  text-align: center;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #6ce906;
+  padding-bottom: 10%;
+}
+
+main .horizontal .intro .overlay .textArea p {
+  padding-bottom: 5%;
+  text-align: center;
+  width: 90%;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2rem;
+  color: #c2c2c2;
+}
+
+main .horizontal .intro .overlay .textArea p span {
+  color: #6ce906;
+}
+
+main .horizontal .goal {
+  background-image: url("/img/questPattern.jpg");
+  background-color: #222222;
+  background-blend-mode: multiply;
+}
+
+main .horizontal .goal .slideHead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-image: url("/img/questPattern.jpg");
+  background-color: #6ce906;
+  background-blend-mode: multiply;
+}
+
+main .horizontal .goal .slideHead h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #222222;
+  width: 15%;
+  height: 10vh;
+  background-color: #6ce906;
+}
+
+main .horizontal .goal .slideBody a{
+  background-color: #6ce906;
+  color: #222222;
+  padding: 2%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+main .horizontal .goal .slideBody a:hover{
+  box-shadow: 0 0 20px greenyellow;
+}
+
+main .horizontal .goal .slideBody {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .horizontal .goal .slideBody ul {
+  padding-left: 5%;
+  list-style-image: url("/img/bullet.png");
+  padding-top: 5%;
+}
+
+main .horizontal .goal .slideBody ul li {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 4rem;
+  color: #c2c2c2;
+  padding-bottom: 10%;
+}
+
+main .horizontal .approach {
+  background-image: url("/img/questPattern.jpg");
+  background-color: #222222;
+  background-blend-mode: multiply;
+}
+
+main .horizontal .approach .slideHead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-image: url("/img/questPattern.jpg");
+  background-color: #6ce906;
+  background-blend-mode: multiply;
+}
+
+main .horizontal .approach .slideHead h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #222222;
+  width: 30%;
+  height: 10vh;
+  background-color: #6ce906;
+}
+
+main .horizontal .approach .slideBody {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .horizontal .approach .slideBody ul {
+  padding-left: 5%;
+  list-style-image: url("/img/bullet.png");
+  padding-top: 5%;
+}
+
+main .horizontal .approach .slideBody ul li {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 4rem;
+  color: #c2c2c2;
+  padding-bottom: 10%;
+}
+
+main .horizontal .technologiesBack, main .horizontal .technologiesFront {
+  background-image: url("/img/questPattern.jpg");
+  background-color: #222222;
+  background-blend-mode: multiply;
+}
+
+main .horizontal .technologiesBack .slideHead, main .horizontal .technologiesFront .slideHead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-image: url("/img/questPattern.jpg");
+  background-color: #6ce906;
+  background-blend-mode: multiply;
+}
+
+main .horizontal .technologiesBack .slideHead h1, main .horizontal .technologiesFront .slideHead h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #222222;
+  width: 30%;
+  height: 10vh;
+  background-color: #6ce906;
+}
+
+main .horizontal .technologiesBack .slideBody, main .horizontal .technologiesFront .slideBody {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .horizontal .technologiesBack .slideBody ul, main .horizontal .technologiesFront .slideBody ul {
+  padding-left: 5%;
+  list-style-image: url("/img/bullet.png");
+}
+
+main .horizontal .technologiesBack .slideBody ul li, main .horizontal .technologiesFront .slideBody ul li {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 4rem;
+  color: #c2c2c2;
+  padding-bottom: 10%;
+}
+
+main .horizontal .technologiesBack .imgContainer, main .horizontal .technologiesFront .imgContainer {
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #6ce906;
+}
+/*# sourceMappingURL=custom.css.map */

@@ -95,8 +95,8 @@ html {
 .landingPage .menu .indexLogo {
   position: fixed;
   top: 85%;
-  left: 1%;
-  opacity: .6;
+  left: 75%;
+  opacity: .8;
   width: 25%;
   display: flex;
   flex-direction: row;
@@ -1563,5 +1563,213 @@ html {
 .errorPage .troubleshoot p {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.5rem;
+}
+
+.editPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../img/questPattern.jpg");
+  background-color: #222222;
+  background-blend-mode: multiply;
+  background-size: cover;
+  color: #c3c3c3;
+}
+
+.editPage h1 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #6ce906;
+  font-size: 3rem;
+}
+
+.editPage form {
+  width: 80%;
+}
+
+.editPage form button {
+  width: 100%;
+  padding: .5% 0;
+  margin: 1% 0;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #222222;
+  background-color: #6ce906;
+  border: none;
+  opacity: .8;
+}
+
+.editPage form button:hover {
+  opacity: 1;
+  box-shadow: 0 0 5px #6ce906;
+}
+
+.newPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../img/questPattern.jpg");
+  background-color: #222222;
+  background-blend-mode: multiply;
+  background-size: cover;
+  color: #c3c3c3;
+}
+
+.newPage h1 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #6ce906;
+  font-size: 3rem;
+}
+
+.newPage form {
+  width: 80%;
+}
+
+.newPage form button {
+  width: 100%;
+  padding: .5% 0;
+  margin: 1% 0;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #222222;
+  background-color: #6ce906;
+  border: none;
+  opacity: .8;
+}
+
+.newPage form button:hover {
+  opacity: 1;
+  box-shadow: 0 0 5px #6ce906;
+}
+
+.lolPage {
+  height: 100vh;
+  width: 100%;
+  background-color: #6ce906;
+  animation: disco 3s infinite;
+  overflow: hidden;
+}
+
+.lolPage .dancingUs {
+  position: absolute;
+  bottom: 0%;
+  left: 30%;
+  animation: moveIn 7s;
+  z-index: 0;
+}
+
+.lolPage .dittoOne {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  animation: moveDitOne 10s;
+  z-index: 2;
+}
+
+.lolPage .dittoTwo {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  animation: moveDitTwo 10s;
+  z-index: 2;
+}
+
+.lolPage .cat {
+  position: absolute;
+  top: 5%;
+  right: -20%;
+  animation: moveCat 4s infinite;
+  z-index: 0;
+}
+
+.lolPage .spongebob {
+  position: absolute;
+  bottom: 0%;
+  left: -80%;
+  z-index: 1;
+  animation: moveBob 20s infinite;
+}
+
+.lolPage iframe {
+  opacity: 0;
+}
+
+@keyframes disco {
+  10% {
+    background-color: #e40404;
+  }
+  20% {
+    background-color: #fff019;
+  }
+  30% {
+    background-color: #00ffb3;
+  }
+  40% {
+    background-color: #00aeff;
+  }
+  50% {
+    background-color: #ae00ff;
+  }
+  60% {
+    background-color: #ff00b3;
+  }
+  70% {
+    background-color: #fb1e55;
+  }
+  80% {
+    background-color: #ab4ee0;
+  }
+  90% {
+    background-color: #4bfaeb;
+  }
+  100% {
+    background-color: #bbff00;
+  }
+}
+
+@keyframes moveIn {
+  from {
+    bottom: -160%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+
+@keyframes moveDitOne {
+  from {
+    left: -60%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes moveDitTwo {
+  from {
+    right: -60%;
+  }
+  to {
+    right: 0%;
+  }
+}
+
+@keyframes moveCat {
+  from {
+    right: -20%;
+  }
+  to {
+    right: 120%;
+  }
+}
+
+@keyframes moveBob {
+  from {
+    left: -80%;
+  }
+  to {
+    left: 130%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

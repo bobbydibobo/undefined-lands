@@ -132,8 +132,8 @@ html {
         .indexLogo {
             position: fixed;
             top: 85%;
-            left: 1%;
-            opacity: .6;
+            left:75%;
+            opacity: .8;
             width: 25%;
            @include flexCenter(row);
     
@@ -1375,3 +1375,164 @@ html {
         }
     }
 }
+
+.editPage{
+    @include flexCenter(column);
+    height: 100vh;
+    background-image: url('../img/questPattern.jpg');
+    background-color: $generalDark;
+    background-blend-mode: multiply;
+    background-size: cover;
+    color: $generalLight;
+    
+    h1{
+        font-family: $titleFont;
+        color: $lightGreen;
+        font-size: 3rem;
+    }
+
+    form{
+        width: 80%;
+        
+        button{
+            width: 100%;
+            padding: .5% 0;
+            margin: 1% 0;
+            font-family: $titleFont;
+            color: $generalDark;
+            background-color: $lightGreen;
+            border: none;
+            opacity: .8;
+
+            &:hover{
+                opacity: 1;
+                box-shadow: 0 0 5px $lightGreen;
+            }
+        }
+    }
+}
+
+.newPage{
+    @include flexCenter(column);
+    height: 100vh;
+    background-image: url('../img/questPattern.jpg');
+    background-color: $generalDark;
+    background-blend-mode: multiply;
+    background-size: cover;
+    color: $generalLight;
+    
+    h1{
+        font-family: $titleFont;
+        color: $lightGreen;
+        font-size: 3rem;
+    }
+
+    form{
+        width: 80%;
+        
+        button{
+            width: 100%;
+            padding: .5% 0;
+            margin: 1% 0;
+            font-family: $titleFont;
+            color: $generalDark;
+            background-color: $lightGreen;
+            border: none;
+            opacity: .8;
+
+            &:hover{
+                opacity: 1;
+                box-shadow: 0 0 5px $lightGreen;
+            }
+        }
+    } 
+}
+
+.lolPage{
+    height: 100vh;
+    width: 100%;
+    background-color: $lightGreen;
+    animation: disco 3s infinite;
+    overflow: hidden;
+
+    .dancingUs{
+        position: absolute;
+        bottom: 0%;
+        left: 30%;
+        animation: moveIn 7s;
+        z-index: 0;
+    }
+
+    .dittoOne{
+        position: absolute;
+        bottom: 0%;
+        left: 0;
+        animation: moveDitOne 10s;
+        z-index: 2;   
+    }
+
+    .dittoTwo{
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        animation: moveDitTwo 10s;
+        z-index: 2;    
+    }
+
+    .cat{
+        position: absolute;
+        top: 5%;
+        right: -20%;
+        animation: moveCat 4s infinite;
+        z-index: 0;
+    }
+
+    .spongebob{
+        position: absolute;
+        bottom: 0%;
+        left: -80%;
+        z-index: 1; 
+        animation: moveBob 20s infinite;
+    }
+
+    iframe{
+        opacity: 0;
+    }
+}
+
+@keyframes disco {
+    10%   {background-color: rgb(228, 4, 4);}
+    20%   {background-color: rgb(255, 240, 25);}
+    30%   {background-color: rgb(0, 255, 179);}
+    40%   {background-color: rgb(0, 174, 255);}
+    50%   {background-color: rgb(174, 0, 255);}
+    60%   {background-color: rgb(255, 0, 179);}
+    70%   {background-color: rgb(251, 30, 85);}
+    80%   {background-color: rgb(171, 78, 224);}
+    90%   {background-color: rgb(75, 250, 235);}
+    100%   {background-color: rgb(187, 255, 0);}
+  }
+
+  @keyframes moveIn {
+    from {bottom: -160%;}
+    to {bottom: 0%;}
+  }
+
+  @keyframes moveDitOne {
+    from {left: -60%;}
+    to {left: 0;}
+  }
+
+  @keyframes moveDitTwo {
+    from {right: -60%;}
+    to {right: 0%;}
+  }
+
+  @keyframes moveCat {
+    from {right: -20%;}
+    to {right: 120%;}
+  }
+  @keyframes moveBob {
+    from {left: -80%;}
+    to {left: 130%;}
+  }
