@@ -24,6 +24,14 @@ const checkAuth = (req, res, next) => {
     res.redirect('/user/login');
 }
 
+const checkAdmin = (req, res, next) => {
+    if(req.user.admin === true) {
+        return next();
+    }
+
+    res.redirect('/game')
+}
+
 /*----------------------
 USER-UPDATE-ROUTES
 ----------------------*/
@@ -63,16 +71,17 @@ QUEST-ROUTES
 router.get('/quests', async (req, res) => {
     const quests = await Quest.find().sort({ requiredLvl: 'desc' });
     const userLevel = await req.user.level;
-    res.render('questsShow', { quests: quests, level: userLevel});
+    const admin = await req.user.admin;
+    res.render('questsShow', { quests: quests, level: userLevel, admin: admin });
 });
 
 //get new Quest page
-router.get('/quests/new', (req, res) => {
+router.get('/quests/new', checkAdmin, (req, res) => {
     res.render('questsNew', { quest: new Quest() });
 });
 
 //get edit quest page
-router.get('/quests/edit/:id', async (req, res) => {
+router.get('/quests/edit/:id', checkAdmin, async (req, res) => {
     try{
         const quest = await Quest.findById(req.params.id);
         res.render('questsEdit', { quest: quest });
@@ -85,10 +94,11 @@ router.get('/quests/edit/:id', async (req, res) => {
 router.get('/quests/:slug', async (req, res) => {
     const quest  = await Quest.findOne({ slug: req.params.slug });
     const userLevel = await req.user.level;
+    const admin = await req.user.admin;
     if(quest == null){
         res.redirect('/game');
     }
-    res.render('singleQuest', { quest: quest, level: userLevel });
+    res.render('singleQuest', { quest: quest, level: userLevel, admin: admin });
 });
 
 //new quest handler

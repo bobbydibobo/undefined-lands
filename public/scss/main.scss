@@ -4,7 +4,7 @@ $titleFont: 'Alegreya Sans SC', sans-serif;
 
 //COLOR-PALETTE
 $generalDark: #222222;
-$generalLight: #F5F5F5;
+$generalLight: #c3c3c3;
 
 $darkBrownie: #927B51;
 $lightBrownie: #A89166;
@@ -424,9 +424,9 @@ html {
 
         .nameTitleContainer{
             width: 25%;
+            height: 100%;
             border-right: 1px solid $lightGreen;
             opacity: .9;
-            padding-top: 2%;
             text-align: center;
 
             .name{
@@ -465,12 +465,12 @@ html {
         height: 100vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        background-color: blue;
+        background-color: $lightGreen;
 
         .houseTile {
             background-image: url('../img/houseTile.jpg');
             background-size: cover;
-            border: .2px solid green;
+            border: 1px dotted $lightGreen;
             cursor: pointer;
 
             &:hover{
@@ -481,7 +481,7 @@ html {
         .cropTile{
             background-image: url('../img/Crop.jpg');
             background-size: cover;
-            border: .2px solid green;
+            border: 1px dotted $lightGreen;
             cursor: pointer;
 
             &:hover{
@@ -492,7 +492,7 @@ html {
         .bridgeTile{
             background-image: url('../img/Bridge.jpg');
             background-size: cover;
-            border: .2px solid green;
+            border: 1px dotted $lightGreen;
             cursor: pointer;
 
             &:hover{
@@ -508,6 +508,18 @@ html {
 
             &:hover{
                 filter: grayscale(100%);
+            }
+
+            p{
+                opacity: 0;
+                color:rgb(93, 93, 93);
+                font-family: $titleFont;
+                font-size: 2.2rem;
+                text-align: center;
+
+                &:hover {
+                    opacity: 1;
+                }
             }
 
             // lake
@@ -553,85 +565,85 @@ html {
 
             //river
             &:nth-child(295) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(296) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(297) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(298) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(299) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(320) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(321) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(322) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(343) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(364) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(365) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(366) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(367) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(368) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(369) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(370) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(371) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(372) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(351) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(330) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(331) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(332) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(311) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(312) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(313) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(314) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
             &:nth-child(315) {
-                background-image: url('../img/waterFull.jpg');
+                background-image: url('../img/lavaFull.jpg');
             }
 
             //earth
@@ -1203,7 +1215,7 @@ html {
     min-height: 100vh;
     background-color: $generalDark;
     overflow: hidden;
-    .shopNav{
+    .shopNav {
         background-image: url('../img/questPattern.jpg');
         background-color: $lightGreen;
         background-size: cover;
@@ -1247,13 +1259,20 @@ html {
     }
 
     .items{
-        padding-top: 7%;
+        padding-top: 8vh;
         @include flexAround(row);
         color: $generalLight;
         font-family: $titleFont;
+        border-bottom: 1px dashed $lightGreen;
 
         .item{
+            width: 33%;
             @include flexAround(column);
+            
+            &:nth-child(2){
+                border-left: 1px dashed $lightGreen;
+                border-right: 1px dashed $lightGreen;
+            }
 
             h3{
                 color: $lightGreen;
@@ -1286,6 +1305,73 @@ html {
                 opacity: 1;
                 box-shadow: 0 0 5px $lightGreen;
             }
+        }
+    }
+}
+
+//ERR PAGE
+.errorPage{
+    .errornav{
+        background-image: url('../img/questPattern.jpg');
+        background-color: $lightGreen;
+        background-size: cover;
+        background-blend-mode:multiply ;
+        @include flexBetween(row);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 8vh;
+        border-bottom: 1px solid $lightGreen;
+        z-index: 10;
+
+        h1{
+            @include flexCenter(row);
+            color: $generalDark;
+            font-family: $titleFont;
+            font-size: 3rem;
+            background-color: #6ce906;
+            height: 9vh;
+            width: 15%;
+        }
+
+        a{
+            
+            @include flexCenter(row);
+            font-family: $titleFont;
+            font-size: 2rem;
+            text-decoration: none;
+            color: $generalDark;
+            background-color: $lightGreen;
+            height: 8vh;
+            width: 10%;
+            opacity: .9;
+            border-bottom: 1px solid $lightGreen;
+
+            &:hover{
+                opacity: 1;
+                box-shadow: 0 0 5px $lightGreen;
+            }
+        }  
+    }
+
+    .troubleshoot{
+        @include flexCenter(column);
+        height: 100vh;
+        background-image: url('../img/questPattern.jpg');
+        background-color: $generalDark;
+        background-blend-mode: multiply;
+        background-size: cover;
+        color: $generalLight;
+
+        h2{
+            font-family: $titleFont;
+            font-size: 2.5rem;
+            color: $lightGreen;
+        }
+
+        p{
+            font-family: $textFont;
+            font-size: 1.5rem;   
         }
     }
 }

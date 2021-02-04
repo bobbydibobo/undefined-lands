@@ -2,8 +2,11 @@
 
     <div class="questNav">
         <h1>Quests</h1>
-        <!--<a href="/game/quests/new">New Quest</a>-->
-    
+
+        <% if(admin){ %>
+        <a href="/game/quests/new">New Quest</a>
+        <% } %> 
+
         <a href="/game">back</a>
     </div>
     <div class="allQuestsContainer">

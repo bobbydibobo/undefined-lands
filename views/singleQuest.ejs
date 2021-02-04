@@ -2,6 +2,9 @@
 
     <div class="questNavigation">
         <h1>Quest</h1>
+        <% if(admin){ %>
+            <a href="/game/quests/edit/<%= quest.id %>">Edit</a>
+        <% } %> 
         <a href="/game/quests">back</a>
     </div>
         
