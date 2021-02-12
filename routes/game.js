@@ -159,9 +159,9 @@ router.put('/buildings', async (req, res) => {
     user.army = req.user.army;
     user.desert = req.user.desert
 
-    if(user.map[tileNr] === 0 && buildNr === 1 && user.coins >= 100 && user.supplies[0] > user.army[0]){
+    if(user.map[tileNr] === 0 && buildNr === 1 && user.coins >= 500 && user.supplies[0] > user.army[0]){
         try{
-            user.coins -= 150;
+            user.coins -= 500;
             
             const newArmy = user.army.slice();
             newArmy[0] += 10;
@@ -177,9 +177,9 @@ router.put('/buildings', async (req, res) => {
             console.log(err);
             res.redirect('/game/buildings');
         }
-    } else if(user.map[tileNr] === -1 && buildNr === 2 && user.coins >= 400) {
+    } else if(user.map[tileNr] === -1 && buildNr === 2 && user.coins >= 3000) {
         try{
-            user.coins -= 400;
+            user.coins -= 3000;
             
             const newSupplies = user.supplies.slice();
             newSupplies[0] += 20;
@@ -195,9 +195,9 @@ router.put('/buildings', async (req, res) => {
             console.log(err);
             res.redirect('/game/buildings');
         }
-    } else if(user.map[tileNr] === -2 && buildNr === 3 && user.coins >= 3000){
+    } else if(user.map[tileNr] === -2 && buildNr === 3 && user.coins >= 20000){
         try{
-            user.coins -= 3000;
+            user.coins -= 20000;
 
             const newArmy = user.army.slice();
             newArmy[1] += 300;
